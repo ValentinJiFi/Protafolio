@@ -1,0 +1,198 @@
+:root{
+  --primario: #041b40;
+  --priamrioOscuro: #203659;
+  --blanco:#fff;
+  --resalte:#0097a7;
+  --negro: #000;
+  --desvanecido:#013A40;
+  --azul:#0097a7;
+  --rosa:#A61162;
+  --rosaClaro: #F2309B;
+
+
+
+
+  --fuentePrincipal:'Quantico', sans-serif;
+  
+}
+
+
+html {
+    box-sizing: border-box;
+    font: 62.5%;
+    
+}
+
+*, *:before, *:after {/*hace que el box-sinzing se lo ponga a todos los elementos. before y after son seudoelemtos osea que no existen como tal pero que tambien se le aplicara*/
+  box-sizing: inherit;
+}
+
+/*Globales*/
+body{
+  background-color: var(--primario);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+}
+
+p{
+  font-size: 1.8rem;
+  font-family: var(--fuentePrincipal);
+  color: var(--resalte);
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+a{
+  text-decoration: none ;
+  font-family: var(--fuentePrincipal);
+  
+}
+.verde{
+  color: #688C01;
+}
+
+img{
+max-width: 30%;
+
+}
+
+.contenedor{
+ 
+  margin: 0 auto;
+  max-width: 120rem;
+}
+@media (min-width: 768px) {
+  .contenedor {
+    display: grid; 
+  }
+}
+
+.sombra{/*la sombra del main*/
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+  background-color: var(--blanco);/*Color de fondo del main*/
+  padding: 1rem;/*Speración hacia arriba*/
+  border-radius: 1rem;/*Los bordes lo redondea*/
+  max-width: max-content;
+  background-color: var(--priamrioOscuro);
+  margin-top: 1rem;
+
+}
+h1, h2, h3{
+  color: var(--negro);
+  font-family: var(--fuentePrincipal);
+}
+h1{
+  font-size: 4rem;
+}
+.contenedor__h1{
+  font-size: 6rem;
+}
+h2{
+  font-size: 3.2rem;
+}
+h3{
+  font-size: 2.4rem;
+}
+/*header*/
+.header{
+  display: flex;
+  
+}
+/*footer*/
+.footer{
+  padding: .01rem 0;
+  margin-top: 1rem;
+}
+.footer__texto{
+  font-family: var(--fuentePrincipal);
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--resalte);
+  text-transform: none;
+}
+/*navegación*/
+.navegacion-principal{
+  /*Padding da el espacio desde donde termina el elemento hacia dentro*/
+display: flex; /*Nos habilita flex box*/
+flex-direction: column; /*Para que se muestreb los encalaces de arriba hacia abajo*/
+background-color: var(--priamrioOscuro);
+}
+
+@media (min-width: 768px) { /* los media queri ereda lo que tenga la clase etc..*/
+  .navegacion-principal{
+    flex-direction: row;/*Hace que los enlaces se vean en horizontal*/
+    justify-content: space-evenly;/*Permite mover el contenido horizontalmente*/
+  }
+}
+.navegacion-principal a{
+display:block; /*Hace que tome todo el espacio*/
+text-align: center;/*Para centrar el texto en este caso los elaces*/
+color: var(--resalte);/*Color de las letra de la navegación*/
+text-decoration: none;/*Elimina lo subrrayado del enlace */
+font-size: 2rem;/*Tamaño de texto*/
+font-weight: 700;/*Para hacerlo en negritas*/
+padding: 1rem;/*Se aplica a los cuatro lados*/ 
+gap: 1rem;
+
+}
+.navegacion-principal a:hover{
+  background-color: #0097a7;
+  color: var(--negro);
+}
+
+.navegacion__enlace--activo {
+color: #D1BB41;
+}
+/*Span*/
+.amarillo{
+  color: #D1BB41;
+}
+.nombre{
+  color: #932cd1;
+}
+.bienvenida{
+  color:var(--resalte);
+  text-transform: none;
+  
+}
+.contenedorFoto{
+  display: flex;
+  justify-content: center;
+}
+/*Contacto*/
+@media (min-width: 768px) {
+  .contenido{
+    display: grid;/*nos agregara la propiedades de cssGrid el cual permite definir la ubicación y el tamaño de los elementos*/
+    grid-template-columns: repeat(3,1fr) ;/*Le dicimos creame 3 columnas en estecaso significa que el del 100% va tres fracciones(fr), repite 3 veces 1 fr*/
+    column-gap: 1rem;/*Crea la separación de los columnas*/
+  }
+}
+
+@media (min-width: 768px) {
+  .contenidoSkills{
+    display: grid;/*nos agregara la propiedades de cssGrid el cual permite definir la ubicación y el tamaño de los elementos*/
+    grid-template-columns: repeat(4,1fr) ;/*Le dicimos creame 3 columnas en estecaso significa que el del 100% va tres fracciones(fr), repite 3 veces 1 fr*/
+    column-gap: 1rem;/*Crea la separación de los columnas*/
+  }
+}
+.servicio{
+  display: flex;/*Habilitamos*/
+  flex-direction: column;/*y utiliamos columnos para que se vea en vertical*/
+  align-items: center;/*Para centrar los items*/
+  }
+  .servicio .iconos{
+
+    height: 15rem;/*Altura*/
+    width: 15rem;/*Ancho*/
+    background-color: var(--primario);/*Color de fondo*/
+    border-radius: 50%;/*Para hacerlo circulo*/
+    display: flex;/*Habilitamos para que nos de acceso a justify-content*/
+    justify-content: space-evenly;/*Distribuye el espacio entre y al rededor de los elementos*/
+    align-items: center;/*Para centrar los items*/
+  
+  }
+  .centrar {
+    text-align: center;
+  }
